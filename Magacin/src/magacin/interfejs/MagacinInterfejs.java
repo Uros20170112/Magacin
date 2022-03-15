@@ -1,5 +1,6 @@
 package magacin.interfejs;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import artikal.KancelarijskiMaterijal;
@@ -8,7 +9,7 @@ import artikal.KucnaHemija;
 
 
 public interface MagacinInterfejs {
-	public void dodajKnjigu(Knjiga knjiga);
+	public void dodajKnjigu(String naziv, int sifra, String opis, int kolicina);
 	
 	public void obrisiKnjigu(Knjiga knjiga);
 	
@@ -16,7 +17,7 @@ public interface MagacinInterfejs {
 	
 	
 	
-	public void dodajKancelarijskiMaterijal(KancelarijskiMaterijal km);
+	public void dodajKancelarijskiMaterijal(String naziv, int sifra, String opis, int kolicina);
 	
 	public void obrisiKnjigu(KancelarijskiMaterijal km);
 	
@@ -24,7 +25,7 @@ public interface MagacinInterfejs {
 	
 	
 	
-	public void dodajKucnuHemiju(KucnaHemija kh);
+	public void dodajKucnuHemiju(String naziv, int sifra, String opis, int kolicina, LocalDate rokTrajanja);
 	
 	public void obrisiKucnuHemiju(KucnaHemija kh);
 	
