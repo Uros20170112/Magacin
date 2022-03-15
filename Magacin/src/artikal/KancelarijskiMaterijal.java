@@ -5,6 +5,17 @@ public class KancelarijskiMaterijal {
 	private int sifra;
 	private String opis;
 	private int kolicina;
+	
+	
+	public KancelarijskiMaterijal(String naziv, int sifra, String opis, int kolicina) {
+		this.naziv = naziv;
+		this.sifra = sifra;
+		this.opis = opis;
+		this.kolicina = kolicina;
+	}
+	public KancelarijskiMaterijal() {
+		
+	}
 	public String getNaziv() {
 		return naziv;
 	}

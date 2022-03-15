@@ -8,6 +8,21 @@ public class KucnaHemija {
 	private String opis;
 	private int kolicina;
 	private LocalDate rokTrajanja;
+	
+	
+	
+	public KucnaHemija() {
+		
+	}
+
+	public KucnaHemija(String naziv, int sifra, String opis, int kolicina, LocalDate rokTrajanja) {
+		this.naziv = naziv;
+		this.sifra = sifra;
+		this.opis = opis;
+		this.kolicina = kolicina;
+		this.rokTrajanja = rokTrajanja;
+	}
+	
 	public String getNaziv() {
 		return naziv;
 	}

@@ -5,6 +5,20 @@ public class Knjiga {
 	private int sifra;
 	private String opis;
 	private int kolicina;
+	
+	public Knjiga(String naziv, int sifra, String opis, int kolicina) {
+		this.naziv = naziv;
+		this.sifra = sifra;
+		this.opis = opis;
+		this.kolicina = kolicina;
+	}
+
+	
+	public Knjiga() {
+		
+	}
+
+
 	public String getNaziv() {
 		return naziv;
 	}
