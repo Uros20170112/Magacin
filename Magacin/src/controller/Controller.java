@@ -13,7 +13,11 @@ public class Controller {
 	List<KucnaHemija> listaKH = null;
 	
 	public void dodajKnjigu(String naziv, int sifra, String opis, int kolicina) {
-		Knjiga knjiga = new Knjiga(naziv, sifra, opis, kolicina);
+		Knjiga knjiga = new Knjiga();
+		knjiga.setNaziv(naziv);
+		knjiga.setSifra(sifra);
+		knjiga.setOpis(opis);
+		knjiga.setKolicina(kolicina);
 		listaKnjiga.add(knjiga);
 	}
 	
@@ -36,7 +40,11 @@ public class Controller {
 	
 	
 	public void dodajKancelarijskiMaterijal(String naziv, int sifra, String opis, int kolicina) {
-		KancelarijskiMaterijal km = new KancelarijskiMaterijal(naziv, sifra, opis, kolicina);
+		KancelarijskiMaterijal km = new KancelarijskiMaterijal();
+		km.setNaziv(naziv);
+		km.setSifra(sifra);
+		km.setOpis(opis);
+		km.setKolicina(kolicina);
 		listaKM.add(km);
 	}
 	
@@ -59,7 +67,12 @@ public class Controller {
 	
 	
 	public void dodajKucnuHemiju(String naziv, int sifra, String opis, int kolicina, LocalDate rokTrajanja) {
-		KucnaHemija kh = new KucnaHemija(naziv, sifra, opis, kolicina, rokTrajanja);
+		KucnaHemija kh = new KucnaHemija();
+		kh.setNaziv(naziv);
+		kh.setSifra(sifra);
+		kh.setOpis(opis);
+		kh.setKolicina(kolicina);
+		kh.setRokTrajanja(rokTrajanja);
 		listaKH.add(kh);
 	}
 	
