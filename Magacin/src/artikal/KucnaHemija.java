@@ -16,11 +16,11 @@ public class KucnaHemija {
 	}
 
 	public KucnaHemija(String naziv, int sifra, String opis, int kolicina, LocalDate rokTrajanja) {
-		this.naziv = naziv;
-		this.sifra = sifra;
-		this.opis = opis;
-		this.kolicina = kolicina;
-		this.rokTrajanja = rokTrajanja;
+		setNaziv(naziv);
+		setSifra(sifra);
+		setOpis(opis);
+		setKolicina(kolicina);
+		setRokTrajanja(rokTrajanja);
 	}
 	
 	public String getNaziv() {
@@ -30,7 +30,7 @@ public class KucnaHemija {
 		if(naziv == null) {
 			throw new NullPointerException("Naziv ne sme da bude null!");
 		}
-		if(naziv == "" || naziv == " ") {
+		if(naziv.isEmpty()) {
 			throw new IllegalArgumentException("Naziv ne sme da bude prazan string!");
 		}
 		this.naziv = naziv;
@@ -51,7 +51,7 @@ public class KucnaHemija {
 		if(opis == null) {
 			throw new NullPointerException("Naziv ne sme da bude null!");
 		}
-		if(opis.length() < 10) {
+		if(opis.length() < 10 && opis.isEmpty()) {
 			throw new IllegalArgumentException("Opis mora da ima vise od 10 karaktera!");
 		}
 		this.opis = opis;

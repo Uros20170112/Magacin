@@ -7,10 +7,10 @@ public class Knjiga {
 	private int kolicina;
 	
 	public Knjiga(String naziv, int sifra, String opis, int kolicina) {
-		this.naziv = naziv;
-		this.sifra = sifra;
-		this.opis = opis;
-		this.kolicina = kolicina;
+		setNaziv(naziv);
+		setSifra(sifra);
+		setOpis(opis);
+		setKolicina(kolicina);
 	}
 
 	
@@ -26,7 +26,7 @@ public class Knjiga {
 		if(naziv == null) {
 			throw new NullPointerException("Naziv ne sme da bude null!");
 		}
-		if(naziv == "" || naziv == " ") {
+		if(naziv.isEmpty()) {
 			throw new IllegalArgumentException("Naziv ne sme da bude prazan string!");
 		}
 		this.naziv = naziv;
@@ -47,7 +47,7 @@ public class Knjiga {
 		if(opis == null) {
 			throw new NullPointerException("Naziv ne sme da bude null!");
 		}
-		if(opis.length() < 10) {
+		if(opis.length() < 10 && opis.isEmpty()) {
 			throw new IllegalArgumentException("Opis mora da ima vise od 10 karaktera!");
 		}
 		this.opis = opis;
